@@ -10,7 +10,7 @@ myserver ="ec2-54-211-255-161.compute-1.amazonaws.com"
 myuser="nrdqscwdlnnlqj"
 mypassword="ed48087107e61d2259f96f7803f5714e005f9123426def9ec08acfea97172620"
 mydb="dduieh0qfumusl"
-
+DATABASE_URL = "postgres://ctqfcnlxvzakfd:42c21575734232f75fb62a49b2e817767b2cf4b0d7129735ba1be4f669d339ab@ec2-54-227-248-71.compute-1.amazonaws.com:5432/d39ngq6hj611o6"
 
 @app.route("/data.json")
 def data():
@@ -59,7 +59,10 @@ def getData():
 	#    postgresql(heroku免費DB)
 	# psycopg2.connect(f'host={myserver} user={test123} password={test123} dbname={aiotdb}')
 
-	conn=psycopg2.connect(f'host={myserver} user={myuser} password={mypassword} dbname={mydb}')
+	# conn=psycopg2.connect(f'host={myserver} user={myuser} password={mypassword} dbname={mydb}')
+	# c = conn.cursor()
+
+	conn = psycopg2.connect(DATABASE_URL)
 	c = conn.cursor()
  
 
@@ -116,8 +119,12 @@ def getPredict():
 	# conn = pymysql.connect(host=myserver,user=myuser, passwd=mypassword, db=mydb)
 	
 	import psycopg2
-	conn=psycopg2.connect(f'host={myserver} user={myuser} password={mypassword} dbname={mydb}')
+	# conn=psycopg2.connect(f'host={myserver} user={myuser} password={mypassword} dbname={mydb}')
+	# c = conn.cursor()
+
+	conn = psycopg2.connect(DATABASE_URL)
 	c = conn.cursor()
+
 	if debug:
 		input("pause.. conn.cursor() ok.......")
 	
