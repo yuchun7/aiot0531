@@ -78,6 +78,8 @@ python app.py
 
 ### step 8: deploy to github (new public github repositoy 不然看不到)
 
+![](img/heroku_deploy.jpg)
+
 delete .git and git remote add origin master github.com/xxxxx
 
 
