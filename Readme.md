@@ -50,10 +50,11 @@ mydb="<fill-in-Heroku-Postgredb-DB-db>"
 
 ```
 **Create!**
-** 放圖片
+![](img/postgresql.jpg)
 
 ### step 5: import postgredb (in db/postgre.db)
-
+ public >> 檔案 >> 載入 SQL 檔案 >> 選擇 "postgres.sql"
+![](img/sql.jpg)
 
 ### step 6: setting db in app.py
 
@@ -88,6 +89,7 @@ delete .git and git remote add origin master github.com/xxxxx
 ![](img/heroku_logs.jpg)
 
 ### step 10: Complete
+![](img/success.jpg)
 
 Sample link 1:
 https://awinlab-aiot.herokuapp.com/
@@ -95,4 +97,3 @@ https://awinlab-aiot.herokuapp.com/
 Sample link 2: 
 https://aiot0529.herokuapp.com/
 
-![](img/success.png)
