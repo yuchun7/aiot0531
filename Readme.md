@@ -69,6 +69,11 @@ mydb="<fill-in-Heroku-Postgredb-DB-db>"
 ```
 
 ### step 7: testing locally by running python app.py
+
+```
+python app.py
+```
+
 ![](img/app_test.jpg)
 
 ### step 8: deploy to github (new public github repositoy 不然看不到)
