@@ -37,8 +37,10 @@ numpy
 ![](img/postgresql1.jpg )
 ![](img/postgresql2.jpg)
 
-### step 4: login to heroku pstgredb using HeidiSQL
+### step 4: login to heroku postgredb using HeidiSQL
 
+
+**Get Your Credentials in heroku and login using HeidiSQL:**
 
 ```sql
 myserver ="<fill-in-Heroku-Postgredb-DB-sever>"
@@ -47,11 +49,16 @@ mypassword="<fill-in-Heroku-Postgredb-DB-pwd>"
 mydb="<fill-in-Heroku-Postgredb-DB-db>"
 
 ```
+**Create!**
+** 放圖片
+
 ### step 5: import postgredb (in db/postgre.db)
 
 
 ### step 6: setting db in app.py
 
+Fill in the code using your heroku Postgredb credentials.
+
 
 ```sql
 myserver ="<fill-in-Heroku-Postgredb-DB-sever>"
@@ -60,7 +67,9 @@ mypassword="<fill-in-Heroku-Postgredb-DB-pwd>"
 mydb="<fill-in-Heroku-Postgredb-DB-db>"
 
 ```
+
 ### step 7: testing locally by running python app.py
+![](img/app_test.jpg)
 
 ### step 8: deploy to github (new public github repositoy 不然看不到)
 
