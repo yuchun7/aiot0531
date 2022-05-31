@@ -84,6 +84,8 @@ delete .git and git remote add origin master github.com/xxxxx
 
 
 ### step 9: Heroku deploy from github
+可以從 view logs 看 deploy 的情況
+![](img/heroku_logs.jpg)
 
 ### step 10: Complete
 
