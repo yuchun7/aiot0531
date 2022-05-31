@@ -121,3 +121,4 @@ Heroku 晚上寄送 Email
     ```
     conn = psycopg2.connect(DATABASE_URL)
     ```
+參考資料：https://stackoverflow.com/questions/51954574/heroku-maintenance-has-changed-my-database-url-i-have-access-to-a-foreign-db
