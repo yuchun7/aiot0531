@@ -32,6 +32,10 @@ numpy
 * go to dashboard
 * new an app
 * go to resource and add-on an Heroku postgredb
+* get your credentials
+
+![](img/postgresql1.jpg )
+![](img/postgresql2.jpg)
 
 ### step 4: login to heroku pstgredb using HeidiSQL
 
@@ -74,5 +78,3 @@ Sample link 2:
 https://aiot0529.herokuapp.com/
 
 ![](img/success.png)
-
-
