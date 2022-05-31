@@ -114,6 +114,9 @@ Heroku 晚上寄送 Email
 * 複製 DATABASE_URL 的 value
 ![](img/config.png)
 * 在 app.py 檔案中新增一個 DATABASE_URL 的參數，參數內容就是剛剛複製的 value
+    ```
+    DATABASE_URL = "<fill-in-Heroku-config-value>"
+    ```
 * 將 app.py 中會用到 credential 的地方(就是 myserver, myuser, mypassword, mydb 那些參數) 刪除或註解掉，並用 DATABASE_URL 這個參數替代。也就是將原本的 conn 參數修改為：
     ```
     conn = psycopg2.connect(DATABASE_URL)
