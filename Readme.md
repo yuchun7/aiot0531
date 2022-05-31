@@ -4,7 +4,7 @@
 #### Author: YuChun
 
 ### step 0 : 
-    * 註冊 Heroku, github 請下載 HeidiSQL, VS code
+    註冊 Heroku, github 請下載 HeidiSQL, VS code
     
 
 ### step 1 : Clone this github
@@ -34,13 +34,13 @@ numpy
 * go to resource and add-on an Heroku postgredb
 * get your credentials
 
-![](img/postgresql1.jpg )
-![](img/postgresql2.jpg)
+    ![](img/postgresql1.jpg )
+    ![](img/postgresql2.jpg)
 
 ### step 4: login to heroku postgredb using HeidiSQL
 
 
-**Get Your Credentials in heroku and login using HeidiSQL:**
+* Get Your Credentials in heroku and login using HeidiSQL:
 
 ```sql
 myserver ="<fill-in-Heroku-Postgredb-DB-sever>"
@@ -101,3 +101,20 @@ My link:
 https://aiot0531yc.herokuapp.com/
 
 ![](img/ezgif.com-gif-maker.gif)
+
+## 遇到的問題：
+
+Heroku 晚上寄送 Email 
+
+> Your database DATABASE_URL on aiot0531yc requires maintenance. During this period, your database will become read-only. Once maintenance has completed, your database credentials and hostname will have changed, but we will update your app's config variables accordingly to reflect the new database connection string .
+>
+
+說明 database credentials 和 hostname 將被更改，因此改用 DATABASE_URL去取得 postgresql database 中的資料。方法為：
+* 進入 heroku >> setting >> Config vars
+* 複製 DATABASE_URL 的 value
+![](img/config.png)
+* 在 app.py 檔案中新增一個 DATABASE_URL 的參數，參數內容就是剛剛複製的 value
+* 將 app.py 中會用到 credential 的地方(就是 myserver, myuser, mypassword, mydb 那些參數) 刪除或註解掉，並用 DATABASE_URL 這個參數替代。也就是將原本的 conn 參數修改為：
+    ```
+    conn = psycopg2.connect(DATABASE_URL)
+    ```
